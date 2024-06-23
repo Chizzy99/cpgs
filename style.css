@@ -1,12 +1,12 @@
 * {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 
 html, body {
-    min-height: 100vh;
+    height: 100vh;
     line-height: 1.6;
     background-color: lightgray; 
     scroll-behavior: smooth;
@@ -28,7 +28,7 @@ a {
     justify-content: space-between;
     width: 100%; 
     height: 70px; 
-    position: fixed;
+    position: relative;
     background-color: rgb(94, 148, 223);
     top: 0px;
     padding: 5px 40px;
@@ -36,6 +36,13 @@ a {
 
 .navbar ul {
     display: flex;    
+}
+
+.navbar h1 {
+    display: flex;
+    align-items: end;
+    text-align: end;
+    justify-content: end;
 }
 
 .navbar a {
@@ -48,443 +55,157 @@ a {
 .navbar a:hover {
     color: red;
 }
-/* image */
-.container {
-    height: 600px;
-    width: auto;
-}
 
-.container * {
-    z-index: 10;
-}
+/* Main Body */
 
-.container img {   
+.container  {
+    display: flex;
+    align-items: center;
+    text-align: center;
     width: 100%;
     height: 100vh;
-}
-
-.container img::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-}
-
-#about {
-    padding: 0px 50px;
-    width: 100%;
-    height: 80vh;
-    margin-top: 100px;
-    background-color: antiquewhite;
-    overflow: hidden;
+    padding: 15px 80px;
+    margin: auto;
+    background: url(./images/Pin_main.jpeg) no-repeat center center/ cover;
 }
 
 .about h1 {
-    padding-left: 500px;
-    padding-top: 200px;
-    padding-bottom: 30px;
-    margin: 0; 
-    font-size: 40px;  
+   font-size: 4rem;
+   margin-bottom: 30px;
+   color: antiquewhite;
+   font-weight: bolder;
 }
 
 .about p {
-    font-size: 20px;
-    margin: 0;  
+    font-size: 1.4rem;
+    color: antiquewhite;
+    padding-top: 30px;
 }
+
+
+
+
 
 /* Footer */
 
 .main-footer {
-    position: absolute;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(94, 148, 223);
+}
+
+.footer p {
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
-    font-weight: bold;
-    width: 100%; 
-    min-height: 70px; 
-    background-color: aliceblue;
-    margin-top: 0px;
-    left: 0;
-    padding: 8px 40px; 
+    padding: 20px;
+    margin: auto;
+    color: antiquewhite;
+    font-size: 1.2rem;
 }
+
 
 /* Hall of Fame */
 
-.navbar-fame {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%; 
-    height: 70px; 
-    position: fixed;
-    background-color: rgb(94, 148, 223);
-    top: 0px;
-    padding: 5px 40px;
-}
-
-.navbar-fame ul {
-    display: flex;    
-}
-
-.navbar-fame a {
-    color: #fff;
-    padding: 10px 20px;
-    margin: 0 5px;
-    font-size: 20px;
-}
-
-.navbar-fame a:hover {
-    color: red;
-}
-
 .fame-container {
-    position: static;
-    height: 100%;
-    width: 100%;
-}
-
-.fame-container img {
     width: 100%;
     height: 100vh;
-}
-.winners img {
-    margin-top: -60px;
-    margin-bottom: -40px;
-    width: 100%;
-}
-.group img {
-    margin: -120px;
-    margin-bottom: -10px;
-    width: 108.5%;
-}
-.winners {
-    padding-top: 50px;
-    width: 100%;
-    height: 100vh;   
+    background: url(./images/Fairhaven.JPG) no-repeat;
 }
 
-.winners h1 {
-    text-align: center;
-    margin-top: 30px;   
-}
-
-.tour-grid {
+.tour-champion {  
+    background-color: gold;
+    border: solid 6px brown;
+    border-radius: 5px;
     position: absolute;
-    left: 17%;
-    max-width: 400px;
-    bottom: -500px;
-    margin: 25px;
-    background: rgb(183, 160, 31);
-    padding: 10px; 
-    font-size: 15px;
+    display: none;
+    text-align: center;
+    top: 20%;
+    left: 35%;
+    padding: 10px 15px;
+    font-size: 1.2rem;
     font-weight: bold;
-    border: solid 8px rgb(167, 28, 28); 
-    border-top-right-radius: 6px; 
-    border-top-left-radius: 6px; 
-    
 }
 
-.tour-grid table {
-    text-align: center;
+.close {
+    display: none;
 }
 
-.tour-grid td {
-    padding: 0 15px;
-    text-align: center;
-    
-}
-
-.tour-grid-2 {
-    position: absolute;
-    left: 39.5%;
-    max-width: 400px;
-    bottom: -500px;
-    margin: 25px;
-    background: rgb(183, 160, 31);
-    padding: 10px; 
-    font-size: 15px;
-    font-weight: bold;
-    border: solid 8px rgb(167, 28, 28); 
-    border-top-right-radius: 6px; 
-    border-top-left-radius: 6px; 
-    
-    
-}
-.tour-grid-2 table {
-    text-align: center;
-}
-
-.tour-grid-2 td {
-    padding: 0 15px;
-    text-align: center;
-}
-
-.tour-grid-3 {
-    position: absolute;
-    left: 61%;
-    max-width: 400px;
-    bottom: -500px;
-    margin: 25px;
-    background: rgb(183, 160, 31);
-    padding: 10px; 
-    font-size: 15px;
-    font-weight: bold;
-    border: solid 8px rgb(167, 28, 28); 
-    border-top-right-radius: 6px; 
-    border-top-left-radius: 6px; 
-   
-    
-}
-.tour-grid-3 table {
-    text-align: center;
-}
-
-.tour-grid-3 td {
-    padding: 0 15px;
-    text-align: center;
-}
-
-.open-container {
-    width: 100%;
-    height: 100%;
-}
-
-.open-winners h1 {
-    text-align: center;
-    margin-top: 5px;
-}
-
-.open-winners {
-    position: absolute;
-    left: 13%;
-    bottom: -1100px;
-    max-width: 400px;
-    margin-top: 400px;
-    margin-left: 20px;
-    background: rgb(183, 160, 31);
-    padding: 10px; 
-    font-size: 15px;
-    font-weight: bold;
-    border: solid 8px rgb(167, 28, 28); 
-    border-top-right-radius: 6px; 
-    border-top-left-radius: 6px; 
-    
-}
-.open-winners table {
-    text-align: center;
-}
-
-.open-winners td {
-    padding: 0 10px;
-    text-align: center;
-}
-
-.open-winners-2 h1 {
-    text-align: center;
-    margin-top: 5px;
-}
-
-.open-winners-2 {
-    position: absolute;
-    left: 30%;
-    bottom: -1070px;
-    max-width: 400px;
-    margin-top: 400px;
-    margin-left: 20px;
-    background: rgb(183, 160, 31);
-    padding: 10px; 
-    font-size: 15px;
-    font-weight: bold;
-    border: solid 8px rgb(167, 28, 28); 
-    border-top-right-radius: 6px; 
-    border-top-left-radius: 6px;
-}
-
-.open-winners-2 table {
-    text-align: center;
-}
-
-.open-winners-2 td {
-    padding: 0 10px;
-    text-align: center;
-}
-
-.dipper-winners h1 {
-    text-align: center;
-    margin-top: 5px;
-}
-
-.dipper-container {
-    width: 100%;
-   height: 100%;
-}
-
-.dipper-winners {
-    position: absolute;
-    left: 46%;
-    bottom: -930px;
-    max-width: 400px;
-    margin-top: 20px;
-    margin-left: 25px;
-    background: rgb(183, 160, 31);
-    padding: 10px; 
-    font-size: 15px;
-    font-weight: bold;
-    border: solid 8px rgb(167, 28, 28); 
-    border-top-right-radius: 6px; 
-    border-top-left-radius: 6px; 
-    
-}
-.dipper-winners table {
-    text-align: center;
-}
-
-.dipper-winners td {
-    padding: 0 10px;
-    text-align: center;
-}
-
-.memorial-winners {
-    position: absolute;
-    left: 62.5%;
-    bottom: -904px;
-    max-width: 400px;
-    margin-top: 20px;
-    margin-left: 25px;
-    background: rgb(183, 160, 31);
-    padding: 10px; 
-    font-size: 15px;
-    font-weight: bold;
-    border: solid 8px rgb(167, 28, 28); 
-    border-top-right-radius: 6px; 
-    border-top-left-radius: 6px; 
-    
-}
-.memorial-winners table {
-    text-align: center;
-}
-
-.memorial-winners td {
-    padding: 0 10px;
-    text-align: center;
-}
-
-.memorial-winners h1 {
-    text-align: center;
-    margin-top: 5px;
-}
-
-button {
+.tour-btn .btn {
     position: absolute;
     display: flex;
-    align-content: end;
-    justify-content: end;
-    left: 75%;
     top: 20%;
-    margin: 60px;
-    padding: 25px;
-    font-size: 30px;
+    left: 10%;
+    background-color: gold;
+    padding: 10px 15px;
+    font-size: 1rem;
     font-weight: bold;
-    opacity: 0.8;
-    border-radius: 50%;
-    overflow: hidden;
+    border: solid 3px brown;
+    border-radius: 3px;
+    box-shadow: 0 0 15px;
 }
 
-button:hover {
-    color: red;
-    background-color: rgb(94, 148, 223);
+.btn:hover {
+    background-color: antiquewhite;
     cursor: pointer;
 }
 
-@media(max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        padding-top: 20px;
-       
-    }
-    .navbar h1 {
-        text-align: center;
-        padding-top: 40px;
-        
-    }
 
-    .container {
-        height: 600px;
-    }
+.btn-close {
+    font-size: 2rem;
+    color: black;
+    position: absolute;
+    top: 47%;
+    left: 34.7%;
+    font-weight: bold;
+}
 
-#about {
-    height: 50%;
-    margin-top: -200px;
-    padding-bottom: 20px;
-    }
 
-.about h1 {
-    display: block;
+.btn-close:hover p {
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+.fame-container-2 {
+    width: 100%;
+    height: 100vh;
+    background: url(./images/Group_3.JPG) no-repeat center center/cover;
+    margin-top: -25px;
+}
+
+
+
+
+
+
+.fame-container-3 {
+    width: 100%;
+    height: 100vh;
+    background: url(./images/pin_group.JPG) no-repeat center center/cover;
+}
+
+
+
+/*  
+.board {
+    background-color: goldenrod;
+    width: 25%;
+    height: auto;
+    border: 5px solid brown;
     text-align: center;
-    padding-left: 5px;
-    padding-bottom: 30px;
-    font-size: 30px;
-    margin-top: 90px;
+   
+    
 }
 
-.about p {
-    text-align: center;
-    }
+.champions-grid {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
 }
 
-@media(max-width: 768px) {
-    .navbar-fame {
-       width: auto;
-       text-align: center;
-       padding-left: 100px;
-       
-    }
-    .navbar-fame h1 {
-       visibility: hidden;
-       left: 0;
-       top: 0;
-       padding-right: 0; 
-        
-    }
-    .fame-container {
-        width: 368px;
-        margin-right: 10px;
-        padding-right: 0px;    
-    }
 
-    .fame-container img {
-        width: 368px;
-    }
 
-    .winners {
-        height: 20%;
-    }
-    .winners img {
-        width: 368px;
-    }
 
-    .tour-grid, .tour-grid-2,.tour-grid-3,.open-winners,.dipper-winners,.memorial-winners {
-        position: relative;
-        align-items: center;
-        text-align: center;
-        top: 0;
-        left: 0;
-        padding: 0px 50px;
-        
-    }
-    .open-winners,.dipper-winners,.memorial-winners {
-       
-        padding: 5px 40px;
-        text-align: center;
-        margin-right: 15px;
-    }
 
-    button {
-        left: 0;
-        top: 200px;
-    }
-}
+  */
