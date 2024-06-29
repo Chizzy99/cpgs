@@ -114,8 +114,18 @@ a {
     background: url(./images/Fairhaven.JPG) no-repeat;
 }
 
+.remove {
+    color: blue;
+    position: absolute;
+}
 
-.champion {
+.remove:hover {
+    cursor: pointer;
+    color: red;
+}
+
+
+ #champion {
     background-color: gold;
     border: solid 6px brown;
     border-radius: 5px;
