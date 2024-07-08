@@ -1,31 +1,18 @@
-const show = document.querySelector("#champion");
-const button = document.querySelector(".tour-btn");
-const close = document.querySelector(".btn")
-const clear = document.querySelector(".remove")
+const show = document.querySelector('#champion');
+const button = document.querySelector('.tour-btn');
+const news = document.querySelector('.news-btn');
+const clear = document.querySelector('.remove');
 
-
-button.addEventListener('click', function() {
-    show.style.display = 'block';
-    button.style.display = 'none';
-});    
-
-clear.addEventListener('click', function() {
-    show.style.display = 'none';
-    
+button.addEventListener('click', function (e) {
+	e.preventDefault();
+	show.style.display = 'block';
+	button.style.display = 'none';
+	news.style.display = 'block';
+	news.addEventListener('click', function () {
+		scrollTo(0, 1300);
+	});
 });
 
-
-// button.addEventListener('click', () => {
-//     clear.style.display = 'none';
-// })
-
-
-// button.addEventListener('click', function() {
-//     show.style.display = 'block';
-    
-// button.addEventListener('click', function() {
-//     show.style.display = 'none';
-//     button.style.display = 'none';  
-// });
-// });
-
+clear.addEventListener('click', function () {
+	show.style.display = 'none';
+});
