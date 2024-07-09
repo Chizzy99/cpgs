@@ -9,10 +9,14 @@ button.addEventListener('click', function (e) {
 	button.style.display = 'none';
 	news.style.display = 'block';
 	news.addEventListener('click', function () {
-		scrollTo(0, 1300);
+		scrollTo(0, 1100);
+		news.style.display = 'none';
+		button.style.display = 'block';
 	});
 });
 
 clear.addEventListener('click', function () {
 	show.style.display = 'none';
+	button.style.display = 'block';
+	news.style.display = 'none';
 });
